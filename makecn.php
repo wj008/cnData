@@ -12,12 +12,11 @@ include 'word.php';
 
 
 //数据库链接
-$sqli = new mysqli('127.0.0.1', 'root', '123456', 'mytest1', 3306);
+$sqli = new mysqli('127.0.0.1', 'mytest', '123456', 'mytest1', 3306);
 $sqli->query("SET NAMES utf8");
 $sqli->query('start transaction');
 
 //及时刷新缓存区显示进度-------
-ob_end_clean();
 ob_implicit_flush(1);
 
 //生成品牌数据
